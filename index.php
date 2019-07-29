@@ -10,46 +10,33 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body style="background-color: #6495ED">
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="index.php">Home</a></li>
+  <li role="presentation"><a href="paralel.php">Paralel</a></li>
+  <li role="presentation"><a href="sequential.php">Sequential</a></li>
+</ul>
     
 
 <div id="container">
-	<h1 style="margin-left:300px;"> Graph coloring </h1>
-	
-	<div id="inputDiv">
-<br>
+	<h1 style="margin-left:300px;"> Graph coloring </h1><br>
+    <h3 style="text-align:center">BIMA || DWI || ELISA || RAFIF </h3><br>
 
-<center>Input graph adjacency matrix <br />
-		<textarea id="inputTextarea">
-0 1 0 0 
-1 0 1 1 
-0 1 0 1 
-0 1 1 0 
+<h3>Cara Penggunaan:</h3><br><br>
+<h4>1. Input Jumlah Simpul Sesuai Dengan Ordo Matriks Adjesensi</h4><br>
+<h4>2. Tentukan Jumlah Ruas Pada Setiap Simpul, Kedalam Matriks Dengan Notasi: </h4>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;- 0&nbsp;&nbsp;Untuk Tidak Ada Relasi</h4>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;- 1&nbsp;&nbsp;Untuk Ada Relasi</h4><br>
 
-		</textarea> <br />
-		<button onclick=main() title="Start coloring"> Let's color </button> 
-		<button onclick=location.reload() title="Clear canvas"> Clear canvas </button> <br />
-	</div>
-	<div hidden id="outputDiv" >
-		
-		Output:
-	</div>
-	<div id="canvasDiv">
-		Graphical output: <br />
-		<div class="kolom">
-		<canvas id="outputCanvas" width="100px" height="180px"> </canvas> 
-		<canvas id="outputCanvas2" width="100px" height="180px"> </canvas> 
-		<canvas id="outputCanvas3" width="100px" height="180px"> </canvas> 
-		</div>
-		
-	</div>
+<h4>3. Klik Start Visualisasi</h4><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	
 </div>
 
 <!-- jQuery 3 -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/script1.js"></script>  
+<script src="js/script2.js"></script>  
 
 </body>
 </html>

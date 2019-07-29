@@ -243,7 +243,7 @@ var G = [];
 var color_class = []; //color classes
 var Pos_X = [],
 	Pos_Y = []; //Graph vertices x and y coordinates (in canvas)
-var DELAY = 1000; //delay time (ms)
+var DELAY = 500; //delay time (ms)
 var colors_list = ["red", "green", "blue", "brown", "purple", "darkblue", "orange", "navy", "gold", "grey", "black", "pink", "silver", "dark grey", "magenta", "yellow"];
 
 function init() {
@@ -274,26 +274,6 @@ function main() {
 				if (vertex > G.length)
 					clearInterval(IntVal);
 			}, DELAY);
-		var IntVal = setInterval(
-			function () {
-				color_class = color(vertex, G, color_class);
-				print_color_class(color_class, colors_list);
-				color_graph(G, color_class, canv2);
-				// ++vertex;
-
-				if (vertex > G.length)
-					clearInterval(IntVal);
-			}, DELAY);
-		var IntVal = setInterval(
-			function () {
-				color_class = color(vertex, G, color_class);
-				print_color_class(color_class, colors_list);
-				color_graph(G, color_class, canv3);
-				// ++vertex;
-
-				if (vertex > G.length)
-					clearInterval(IntVal);
-			}, DELAY);
 	}
 
 }
@@ -306,14 +286,14 @@ function main() {
 	G = getMatrix(data); //get matrix from data
 	//if it's simple graph
 	if (isSimpleGraph(G)) {
-		var canv3 = document.getElementById("outputCanvas3");
-		drawGraph(G, canv3);
-
-		// var canv2 = document.getElementById("outputCanvas2");
-		// drawGraph(G, canv2);
-
 		var canv = document.getElementById("outputCanvas");
 		drawGraph(G, canv);
+
+		/*var canv = document.getElementById("outputCanvas2");
+		drawGraph(G, canv);
+
+		var canv = document.getElementById("outputCanvas3");
+		drawGraph(G, canv);*/
 		//color it step by step with delay
 
 	}
@@ -328,29 +308,6 @@ function main() {
 			if (vertex > G.length)
 				clearInterval(IntVal);
 		}, DELAY)
-
-		var vertex = 0;
-		// var IntVal = setInterval(
-		// 	function () {
-		// 		color_class = color(vertex, G, color_class);
-		// 		print_color_class(color_class, colors_list);
-		// 		color_graph(G, color_class, canv2);
-		// 		// ++vertex;
-	
-		// 		if (vertex > G.length)
-		// 			clearInterval(IntVal);
-		// 	}, DELAY)
-			var vertex = 0;
-			var IntVal = setInterval(
-				function () {
-					color_class = color(vertex, G, color_class);
-					print_color_class(color_class, colors_list);
-					color_graph(G, color_class, canv3);
-					// ++vertex;
-		
-					if (vertex > G.length)
-						clearInterval(IntVal);
-				}, DELAY)
 
 
 }
